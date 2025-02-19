@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+    --color-maroon: #a43622;
+    --color-maroon-700: #853020;
+    --color-maroon-900: #6c2113;
+    --color-red: #c6371f;
+    --color-red-600: #a92d19;
+    --color-red-900: #8b1e0d;
+    --color-orange: #e28f33;
+    --color-orange-600: #d97e1a;
+    --color-orange-900: #ca6507;
+    --color-yellow: #ecd12c;
+    --color-yellow-600: #e8ca10;
+    --color-yellow-900: #dcb500;
+    --color-lightgreen: #85bd42;
+    --color-lightgreen-600: #75af2f;
+    --color-lightgreen-900: #5d9519;
+    --color-green: #148a4b;
+    --color-green-600: #0b743c;
+    --color-green-900: #096333;
+    --color-aqua: #78b8a1;
+    --color-aqua-600: #4dab89;
+    --color-aqua-900: #349370;
+    --color-lightblue: #6cafd3;
+    --color-lightblue-600: #569fc6;
+    --color-lightblue-900: #3d8db8;
+    --color-blue: #0a76c4;
+    --color-blue-600: #0062a9;
+    --color-blue-900: #004c83;
+    --color-darkblue: #3b4485;
+    --color-darkblue-600: #283175;
+    --color-darkblue-900: #1a2260;
+    --color-purple: #651072;
+    --color-purple-900: #4c0556;
+    --color-purple-900: #380340;
+    --color-pink: #d35585;
+    --color-pink-600: #ab2a5a;
+    --color-pink-900: #c03c6e;
+}
+
+body {
+    background-color: rgb(169, 169, 169);
+}

@@ -1,6 +1,7 @@
 import classNames from "classnames"
-import { COLOR_GRADIENTS } from "./COLOR_GRADIENTS"
 import { PlacedPiece, UnplacedPiece } from "../../shared/types"
+import styles from "./GridPiece.module.css"
+import { CSSProperties } from "react"
 
 type Props = {
   piece: UnplacedPiece | PlacedPiece
@@ -17,12 +18,15 @@ export default function GridPiece({ piece }: Props) {
         <div
           key={`${x},${y}`}
           className={classNames(
-            "rounded-full bg-radial-[at_50%_40%] shadow-2xl shadow-black",
-            COLOR_GRADIENTS[color]
+            "rounded-full shadow-md shadow-gray-900",
+            styles.ball,
           )}
           style={{
-            gridArea: `${anchorY + y + 1} / ${anchorX + x + 1} / ${anchorY + y + 1} / ${anchorX + x + 1}`
-          }}
+            gridArea: `${anchorY + y + 1} / ${anchorX + x + 1} / span 1 / span 1`,
+            background: `var(--color-${color})`,
+            "--shadow-color-1": `color-mix(in srgb, var(--color-${color}-600) 20%, transparent)`,
+            "--shadow-color-2": `var(--color-${color}-900)`
+          } as CSSProperties}
         >
         </div>
       ))}

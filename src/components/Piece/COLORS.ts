@@ -1,4 +1,4 @@
-export const COLOR_GRADIENTS = {
+export const COLORS = {
     maroon: "from-maroon to-maroon-900",
     red: "from-red to-red-900",
     orange: "from-orange to-orange-900",

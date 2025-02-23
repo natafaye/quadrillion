@@ -2,7 +2,7 @@
 
 @theme {
     --color-maroon: #a43622;
-    --color-maroon-700: #853020;
+    --color-maroon-600: #853020;
     --color-maroon-900: #6c2113;
     --color-red: #c6371f;
     --color-red-600: #a92d19;
@@ -37,6 +37,7 @@
     --color-pink: #d35585;
     --color-pink-600: #ab2a5a;
     --color-pink-900: #c03c6e;
+    --shadow-piece: rgba(38, 57, 77, 0.3) 0 4px 8px;
 }
 
 body {

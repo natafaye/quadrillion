@@ -1,5 +1,5 @@
 import BoardTile from "./BoardTile"
-import Piece from "../Piece"
+import GridPiece from "../Piece/GridPiece"
 import type { Layout, PlacedPiece, Tile } from "../../shared/types"
 
 type Props = {
@@ -15,7 +15,10 @@ export default function Board({ layout, tileList, pieceList, onRotateTile, onRot
   const { slots, dimensions: [width, height] } = layout
 
   return (
-    <div className="grid" style={{ gridColumn: width, aspectRatio: width / height }}>
+    <div className="grid" style={{
+      gridTemplate: `repeat(${height}, 1fr) / repeat(${width}, 1fr)`,
+      aspectRatio: width / height
+    }}>
       {slots.map(([x, y], index) => (
         <div key={index} style={{ gridArea: `${y + 1} / ${x + 1} / ${y + 5} / ${x + 5}` }}>
           {tileList[index] && (
@@ -26,9 +29,10 @@ export default function Board({ layout, tileList, pieceList, onRotateTile, onRot
           )}
         </div>
       ))}
-      {/* {pieceList.map(piece => (
-        <Piece key={piece.id} piece={piece}/>
-      ))} */}
+      {pieceList.map(piece => (
+        <GridPiece key={piece.id} piece={piece} />
+      ))}
+      {/* <div className="bg-amber-600" style={{ gridArea: "3 / 3 / 3 / 3" }}>hi</div> */}
     </div>
   )
 }

@@ -1,0 +1,4 @@
+.styledScrollbar {
+    scrollbar-color: var(--color-gray-700) var(--color-gray-500);
+    scrollbar-width: thin;
+}

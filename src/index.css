@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rationale&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -38,6 +39,7 @@
     --color-pink-600: #ab2a5a;
     --color-pink-900: #c03c6e;
     --shadow-piece: rgba(38, 57, 77, 0.3) 0 4px 8px;
+    --font-rationale: "Rationale", serif;
 }
 
 body {

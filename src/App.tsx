@@ -39,7 +39,7 @@ export default function App() {
   return (
     <div className="h-screen w-screen flex flex-col">
       <div>
-        <h3 className="text-5xl text-center mb-4">Quadrillion</h3>
+        <h3 className="text-6xl text-center my-4 font-rationale">Quadrillion</h3>
         <PieceTray pieceList={unplacedPieces} onRotate={rotatePiece} />
       </div>
       <div className="grow shrink flex justify-center my-5">

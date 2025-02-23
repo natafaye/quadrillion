@@ -30,9 +30,8 @@ export default function Board({ layout, tileList, pieceList, onRotateTile, onRot
         </div>
       ))}
       {pieceList.map(piece => (
-        <GridPiece key={piece.id} piece={piece} />
+        <GridPiece key={piece.id} piece={piece} onRotate={() => onRotatePiece(piece.id)} />
       ))}
-      {/* <div className="bg-amber-600" style={{ gridArea: "3 / 3 / 3 / 3" }}>hi</div> */}
     </div>
   )
 }

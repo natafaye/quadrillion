@@ -1,11 +1,11 @@
 import BoardTile from "./BoardTile"
-import GridPiece from "../Piece/GridPiece"
-import type { Layout, PlacedPiece, Tile } from "../../shared/types"
+import type { Layout, Piece, Tile } from "../../shared/types"
+import { DraggablePiece } from "../Piece"
 
 type Props = {
   layout: Layout
   tileList: Tile[]
-  pieceList: PlacedPiece[]
+  pieceList: Piece[]
   onRotateTile: (tileId: number) => void
   onRotatePiece: (pieceId: number) => void
 }
@@ -24,13 +24,14 @@ export default function Board({ layout, tileList, pieceList, onRotateTile, onRot
           {tileList[index] && (
             <BoardTile
               tile={tileList[index]}
+              slot={[x, y]}
               onRotate={() => onRotateTile(tileList[index].id)}
             />
           )}
         </div>
       ))}
       {pieceList.map(piece => (
-        <GridPiece key={piece.id} piece={piece} onRotate={() => onRotatePiece(piece.id)} />
+        <DraggablePiece key={piece.id} piece={piece} onRotate={() => onRotatePiece(piece.id)} />
       ))}
     </div>
   )

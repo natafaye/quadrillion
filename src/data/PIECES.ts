@@ -1,6 +1,6 @@
-import type { UnplacedPiece } from "../shared/types";
+import type { Piece } from "../shared/types";
 
-export const PIECES: UnplacedPiece[] = [
+export const PIECES: Piece[] = [
     {
         id: 0,
         color: "maroon",

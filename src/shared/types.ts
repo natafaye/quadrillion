@@ -16,13 +16,12 @@ export type COLOR = "maroon" | "red" | "orange" |
     "yellow" | "lightgreen" | "green" | "aqua" | 
     "lightblue" | "blue" | "darkblue" | "purple" | "pink"
 
-export type UnplacedPiece = {
+export type Piece = {
     id: number
     color: COLOR
     dimensions: Coordinate
     spots: Coordinate[]
+    location?: Coordinate
 }
 
-export type PlacedPiece = UnplacedPiece & {
-    location: Coordinate
-}
+export type PlacedPiece = Required<Piece>
